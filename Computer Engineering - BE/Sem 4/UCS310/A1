@@ -1,0 +1,47 @@
+Lab Assignment–1 
+ 
+1.	Create table Student (Rno, Name, DOB, Gender, Class, College, City, Marks)  
+2.	Insert 5 records in student table 
+3.	Display the information of all the students 
+4.	Display the detail structure of student table 
+5.	Display Rno, Name and Class information of ‘Patiala’ students. 
+6.	Display information on ascending order of marks 
+7.	Change the marks of Rno 5 to 89. 
+8.	Change the name and city of Rno 9. 
+9.	Delete the information of ‘Amritsar’ city records 
+10.	Delete the records of student where marks<30. 
+
+
+ANSWERS:
+1.
+create table s1 (
+Rno         int, 
+SName   varchar(30), 
+DOB       date, 
+Gender  varchar(8), 
+SClass    varchar(8), 
+College  varchar(20), 
+City        varchar(10), 
+Marks    int);
+
+2.
+insert into s1
+values(01,'Rohit',TO_DATE('01/02/1980','DD/MM/YYYY'),'Male','COE5','Thapar','Patiala’, 65);
+insert into s1
+values(05, 'Ram', TO_DATE('03/12/1980', 'DD/MM/YYYY'), 'Male', 'CS4', 'IIITD', 'Delhi', 45);
+insert into s1
+values(03, 'Geeta', TO_DATE('11/05/1980', 'DD/MM/YYYY'), 'Female', 'CI8', 'Amritsar College', 'Amritsar', 46);
+insert into s1
+values(04, 'Veena', TO_DATE('24/09/1980', 'DD/MM/YYYY'), 'Female', 'ME6', 'NIT', 'Jaipur', 68);
+insert into s1
+values(09, 'Lata', TO_DATE('13/10/1980', 'DD/MM/YYYY'), 'Female', 'CO5', 'TIET', 'Patiala', 25);
+
+3. select * from s1;
+4. desc s1;
+5. select Rno, Sname, SClass from s1 where City=’Patiala’;
+6. select * from s1 order by Marks asc;
+7. update s1 set Marks=89 where Rno=05;
+8. update s1 set SName='Bina', City='Chennai' where Rno=09;
+9. delete from s1 where City like 'Amritsar'; or City=’Amritsar’
+10. delete from s1 where Marks<30;
+
