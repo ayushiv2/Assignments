@@ -1,0 +1,61 @@
+#Q1
+
+##to make my chest, basically the sample space
+#chest <- c(rep("gold", 20), rep("silver",30), rep("bronze",50))
+#
+## a) now drawing from the chest
+#event <- sample(x=chest, size=10)
+#print(event)
+#
+## b) failure, success for next 10 processes
+#print(sample(c("success", "failure"),10,replace=T,prob=(c(0.9,0.1))))
+
+#----------------------------------------------------------------------------
+
+##Q2
+## a) having same birthday
+#k = 2  # number of people in room
+#p <- numeric(k)  
+#for (i in 1:k)      {
+#  q <- 1 - (0:(i - 1))/365  
+#  p[i] <- 1 - prod(q)  }
+#prob <- p[k]
+#print(prob)
+#
+## b)
+#
+#M=365
+#for (j in 1:M){
+#  k = j  
+#  p <- numeric(k)  
+#  for (i in 1:k)      {
+#    q <- 1 - (0:(i - 1))/365  
+#    p[i] <- 1 - prod(q)  }
+#  prob <- p[k]
+#  
+#  if(prob>0.5){
+#    break
+#  }
+#}
+#print(prob)
+#print(k)
+
+#------------------------------------------------------------------------------
+
+#Q4
+
+library(datasets)
+#print(head(iris)) # first few rows
+#print(str(iris)) #structure
+#print(iris$Sepal.Length) #range
+#print(mean(iris$Sepal.Length)) #mean
+#print(summary(iris)) 
+print(sd(iris$Sepal.Length)) 
+print(var(iris$Sepal.Length))
+
+
+
+
+
+
+
