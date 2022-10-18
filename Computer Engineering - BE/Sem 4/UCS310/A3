@@ -1,0 +1,43 @@
+Assignment 3
+Write queries to: 
+1.	Display the system date 
+2.	Display current day 
+3.	Display current month and spell out year 
+4.	Display spell out current date 
+5.	Check whether it is AM or PM right now 
+6.	Display the date of next Friday 
+7.	Round the system date on month 
+8.	Truncate the system date on month 
+9.	Round the system date on year 
+10.	Truncate the system date on year 11. Find the day after three days 
+Queries Based on EMP table 
+12.	Display day of date of joining column 
+13.	Display those employees who join the company on Monday 
+14.	Display those employees who join the company this month 
+15.	Display those employees who join the company in last 30 days 
+Create a table train having three four columns 
+16.	Train Number, date of Departure, time of departure, time of arrival 
+17.	Insert five columns in train table 
+18.	Display all the records 
+19.	Display the time values inserted in the columns 
+20.	Display those trains which arrived on PM 
+21.	Display train number who are going to depart in next on hour. 
+
+ANSWERS:
+
+1. select sysdate from dual;
+2. select to_char(sysdate, 'day') from dual;
+3. select to_char(sysdate, 'mon year') from dual;
+4. select to_char(sysdate, 'ddspth') from dual;
+5. select to_char(sysdate, ‘PM’) from dual;
+6. select lower(next_day(sysdate, 'friday')) from dual;
+7. select round (to_date(sysdate),'MON') from dual;
+8. select trunc(to_date(sysdate),'MON') from dual;	
+9. select round(to_date(sysdate),'year') from dual;
+10. select trunc(to_date(sysdate),'year') from dual;
+11. select to_char(sysdate+3, 'day') from dual;
+
+12. select ename, to_char(hiredate, 'day') as day_of_hire from emp;
+13. select ename from emp where to_char(hiredate, 'fmday') = 'monday';
+14. select ename from emp where to_char(hiredate, 'mon') = to_char(sysdate, 'mon');
+15. select ename from emp where hiredate > sysdate-30 and hiredate <sysdate;
