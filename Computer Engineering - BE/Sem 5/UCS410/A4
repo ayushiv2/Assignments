@@ -1,0 +1,49 @@
+##Q1
+
+#wt <- c(0,1,2,3,4)
+#x <- c(0.41,0.37,0.16,0.05,0.01)
+#s <- sum(wt)   #sum the matrix
+#ans <- weighted.mean(c(wt%*%x),s)  
+##weighted.mean simply takes the weight mean 
+##and we use c(a%*%b) for matrix multiplication
+#print(ans)
+
+
+
+##Q2
+
+#integrand <- function(t) {0.1*exp(-0.1*t)}
+#i <-integrate(integrand, lower = 0, upper = Inf)
+#print(i)
+
+
+
+##Q3
+
+#x=c(0,1,2,3)
+#p=c(0.1,0.2,0.2,0.5)
+#s=sum(x)
+#m <- weighted.mean(x%*%p, s)
+#f <- function(k) {(12*k)+(2*(3-k))-(3*6)}
+#print(f(m))
+
+
+
+##Q4
+
+#first moment about the mean = 0
+#second moment about mean
+
+x <- c(2,3,4,5,6,7,8,9)
+#first moment
+i <- function(t) {(t-0)*(0.5*exp(-1*abs(t)))}
+a=integrate(i,-Inf,Inf)
+print(a)
+#second moment
+i <- function(t) {((t-0)**2)*(0.5*exp(-1*abs(t)))}
+a=integrate(i,-Inf,Inf)
+print(a)
+
+
+
+
