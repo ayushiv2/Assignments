@@ -1,0 +1,69 @@
+#A1
+c=c(5,10,15,20,25,30)
+max(c)
+min(c)
+
+#A2
+
+num= readline(prompt="Enter the number:")
+num=as.integer(num)
+fact=1
+if(num<0){
+  print("ERROR: Negative number entered")
+}else if(num==0){
+  fact=1
+}else{
+  for(i in 1:num){
+    fact=fact*i;
+  }
+}
+print(fact)
+
+#A3
+n=readline(prompt="Enter  the number of terms you want:")
+n=as.integer(n)
+
+t1=0
+t2=1
+
+if(n==1){
+  print(t1)
+}else if(n==2){
+  print(t1)
+  print (t2)
+}else{
+  print(t1)
+  print (t2)
+  for(i in 3:n){
+    tn=t1+t2
+    print(tn)
+    t1=t2
+    t2=tn
+  }
+}
+
+#A4
+#Calculator
+a=readline(prompt="Enter first number:")
+b=readline(prompt="Enter second number:")
+a=as.integer(a)
+b=as.integer(b)
+
+operator=readline(prompt="Enter the mathematical operator:")
+switch(
+  operator,
+  "+"=print(a+b),
+  "-"=print(a-b),
+  "*"=print(a*b),
+  "/"=print(a/b),
+)
+
+sale=c(10,20,30,40,50)
+months=c("Jan","Feb","March","April","May")
+pie(sale,months,main="Sale Data")
+
+barplot(sale,xlab="Month",ylab="Sales",main="Sale Data",names.arg=months,col = "Blue")
+
+x=c(1,2,3,4,5,6)
+y=c(10,40,20,50,25,80)
+plot(
