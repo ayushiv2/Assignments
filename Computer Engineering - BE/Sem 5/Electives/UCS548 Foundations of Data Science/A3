@@ -1,0 +1,36 @@
+
+
+#Ans 1
+A = c(23, 34 ,56,3 ,0, 0 )
+B=c("c","b","a")
+
+#Ans 2
+m=10
+n=20
+Seq1=seq(1,n,by=0.6)
+Seq2=seq(m,n,by=0.6)
+
+#Ans 3
+Seq3=seq(1,50,length.out=10)
+Seq3
+
+#Ans 4
+rep(c(3,4,5),times=5)
+
+#Ans 5
+RandomVect=runif(8,min=0,max=100)
+length(RandomVect)
+#Ans 6
+C=c(2, 3, 4, 5, 6, 7)
+A+C
+
+#Ans 7
+D= c(6, 7)
+A+D
+
+#Ans 8
+sqrt(A)
+#Ans 9
+length(A)
+length(B)
+length(C)

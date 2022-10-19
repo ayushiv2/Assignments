@@ -1,0 +1,64 @@
+#Aditya Kuthiala
+#102003105
+
+
+#A1
+a=23.4
+b=45
+c=678
+print(a)
+print(b)
+print(c)
+
+#A2
+ls()
+
+#A3
+rm(c)
+ls()
+
+#A4
+# I am learning R
+
+#A5
+firstname="MyName"
+lastname= "MySurname"
+
+#A6
+x=TRUE
+class(x)
+
+#A7
+c=10
+sum=a+b+c
+diff=a-b-c
+mul=a*b*c
+div=a/b/c
+
+sum
+diff
+mul
+div
+
+#A8
+exp(1)
+
+e=exp(1)
+log(e)
+
+log10(100)
+
+log2(32)
+
+pi
+
+sqrt(100)
+
+#A10
+23 + (4.5 * 2.3) / 10
+
+456 / 12 - log(90)
+
+exp(5) + 12 / (5 ^ 6)
+
+sqrt(45)*12/3

@@ -1,0 +1,75 @@
+Lab Assignment–6
+ 
+Q1) Check the structure of tables. 
+ 
+Q2) Check the constraint name for applied constraints? 
+ 
+Q3) Drop the unique constraint on ENAME 
+ 
+Q4) Drop the Foreign Key constraint on DEPTNO 
+ 
+Q5) Add Foreign Key constraint on DEPTNO 
+ 
+Q6) Change Data type of ENAME 
+ 
+Q7) Change width of DNAME 
+ 
+Q8) Add COMM column in EMP table 
+ 
+Q9) Drop CITY column from J table 
+ 
+Q10) Create duplicate copy of EMP table 
+ 
+Q11) Copy structure of DEPT table in another table with   different column names 
+ 
+Q12) Change the name and job of the employee whose EMPNO =100  
+Q13) Delete the record of employee who belong to computer department 
+ 
+Q14) Drop DEPT Table 
+ 
+Q15) Drop duplicate table of EMP table 
+ 
+
+Answers:
+1.	describe emp;
+      describe dept;
+      describe s;
+      describe p;
+      describe j;
+      describe spj;
+2.	select constraint_name, constraint_type, table_name, search_condition 
+from user_constraints where table_name='emp';
+
+select constraint_name, constraint_type, table_name, search_condition 
+from user_constraints where table_name='dept';
+
+select constraint_name, constraint_type, table_name, search_condition 
+from user_constraints where table_name='P';
+
+select constraint_name, constraint_type, table_name, search_condition 
+from user_constraints where table_name='S';
+
+select constraint_name, constraint_type, table_name, search_condition 
+from user_constraints where table_name='J';
+
+select constraint_name, constraint_type, table_name, search_condition 
+from user_constraints where table_name='SPJ';
+
+3.	alter table emp drop constraints ename_unique;
+4.	alter table emp drop constraints deptno_foreignkey;
+5.	alter table emp add constraint deptno_foreignkey foreign key (deptno) references dept (deptno);
+6.	alter table emp modify ename char(100);
+7.	alter table dept modify dname varchar(100);
+8.	alter table emp add comm number(10);
+9.	alter table J drop column city;
+10.	create table emp_new as select * from emp;
+11.	create table dept_new(deptno_new, dname_new) as select deptno, dname from dept where  1=0;
+12.	update emp set ename='Caleb', job='Prof' where empno=100;
+13.	delete from emp where deptno=1;
+14.	delete from dept;
+      drop table dept;
+      select * from dept;
+15.	delete from emp_new;
+      drop table emp_new;
+      select *from emp_new;
+
