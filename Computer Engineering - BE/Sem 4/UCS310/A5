@@ -71,3 +71,4 @@ pno number references P(pno),
 jno number references J(jno),
 primary key(sno, pno, jno)
 );
+
